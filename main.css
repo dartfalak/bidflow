@@ -3,8 +3,8 @@
   display: flex;
   justify-content: space-between; 
   align-items: center;          
-  padding: 15px 40px;           
-  background-color: #ffffff;     
+  padding: 10px 20px;          
+  background-color: #e9e9db;     
   border-bottom: 1px solid #eee; 
 }
 
@@ -34,7 +34,7 @@
   border-radius: 6px;
   font-weight: bold;
   cursor: pointer;
-  transition: background 0.3s ease;
+  
 }
 
 .btn-get-started:hover {
