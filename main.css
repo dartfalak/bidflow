@@ -21,6 +21,7 @@ body {
 .sign in {
     margin-left: auto;
     margin-right: 20px;
+    position: absolute;
     
 }
 
@@ -28,6 +29,5 @@ body {
     text-decoration: none;
     color: blue;
     font-size: 16px;
-    
     
 }
