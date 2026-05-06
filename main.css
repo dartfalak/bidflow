@@ -59,4 +59,10 @@
 
 }
 
-.im
+.img {
+    width: 300px;
+    height: auto;
+    background-attachment: fixed;
+    margin-top:-500px;
+    
+}
