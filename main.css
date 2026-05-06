@@ -10,8 +10,8 @@
     display: flex;
   justify-content: space-between; 
   align-items: center;          
-  padding: 10px 20px;          
-  
+  padding: 10px 20px;   
+  z-index: 1;      
   height: 50px;  
   
 }
@@ -64,5 +64,6 @@
     height: 30%;
     background-attachment: fixed;
     margin-top:-590px;
+    z-index: -1;
     
 }
