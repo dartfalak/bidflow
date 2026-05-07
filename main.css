@@ -102,6 +102,7 @@
     font-weight: bold;
     color: #f5f5f5;
     text-shadow: 2px 2px 10px rgba(0,0,0,0.6);
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-content p{
@@ -110,6 +111,7 @@
     margin-bottom: 30px;
     color: #f5f5f5;
     text-shadow: 1px 1px 8px rgba(0,0,0,0.5);
+    font-family: 'Poppins', sans-serif;
 }
 
 .hero-btn{
