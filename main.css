@@ -66,8 +66,45 @@
     top:-2px;
     z-index: -1;
     object-fit: cover;
-    
-
+  
     
 } 
 
+.hero-content{
+    position: absolute;
+    top: 50%;
+    left: 8%;
+    transform: translateY(-50%);
+    color: white;
+    max-width: 600px;
+    z-index: 2;
+}
+
+.hero-content h1{
+    font-size: 40px;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    font-weight: bold;
+}
+
+.hero-content p{
+    font-size: 22px;
+    line-height: 1.6;
+    margin-bottom: 30px;
+    color: #f1f1f1;
+}
+
+.hero-btn{
+    padding: 15px 30px;
+    border: none;
+    border-radius: 10px;
+    background: #007bff;
+    color: white;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.hero-btn:hover{
+    background: #0056b3;
+}
