@@ -128,3 +128,28 @@
 .hero-btn:hover{
     background: #0056b3;
 }
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top:0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.8);
+
+}
+
+.modal-content{
+  background-color: #1a1a1a;
+  color: white;
+  margin: 10% auto;
+  padding: 40px;
+  border-radius: 15px;
+  width:90%;
+  max-width: 400px;
+  text-align: center;
+  position: relative;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.5);
+} 
