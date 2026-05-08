@@ -10,6 +10,6 @@ authButtons.forEach(button => {
     });
 });
 
-closeBtn.addEventListener("click", () => {
+closeBtn.onClick = function() {
     modal.style.display = "none";
-});
+}
