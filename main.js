@@ -13,3 +13,9 @@ authButtons.forEach(button => {
 closeBtn.onClick = function() {
     modal.style.display = "none";
 }
+
+window.onClick = function(event) {
+    if {event.target == modal} {
+        modal.style.display = "none";
+    }
+}
