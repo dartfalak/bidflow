@@ -6,4 +6,10 @@ const authButtons = document.querySelectorAll(".trigger-auth");
 authButtons.forEach(button => {
     button.addEventListener("click", (e) => {
         e.preventDefault();
-        
+        modal.style.display = "block";
+    });
+});
+
+closeBtn.addEventListener("click", () => {
+    modal.style.display = "none";
+});
