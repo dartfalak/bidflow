@@ -141,7 +141,7 @@
 
 }
 
-/* .modal-content{
+ .modal-content{
   background-color: #1a1a1a;
   color: white;
   margin: 10% auto;
@@ -180,12 +180,12 @@
 .modal-content .btn-get-started {
   width:100%;
   margin-top:15px;
-} */
+} 
 
 
-modal-content {
+/* .modal-content {
     background-color: #f9f9f9;
-    color: #333; 
+    color: white; 
     margin: 5% auto;
     padding: 40px;
     border-radius: 24px; 
@@ -251,4 +251,4 @@ modal-content {
 
 
 .footer-text { margin-top: 20px; font-size: 13px; }
-.footer-text a { color: #333; font-weight: bold; text-decoration: none; }
+.footer-text a { color: #333; font-weight: bold; text-decoration: none; } */
