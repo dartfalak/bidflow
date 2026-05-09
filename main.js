@@ -27,3 +27,7 @@ import { createUserWithEmailAndPassword } from "firebase/auth"
 import { auth } from "./auth.js";
 
 createUserWithEmailAndPassword(auth, "test@gmail.com", "123456")
+    .then((userCredential) => {
+        const user = userCredential.user;
+        console.log("User created:", user);
+    })
