@@ -19,3 +19,6 @@ window.onclick = function(event) {
         modal.style.display = "none";
     }
 }
+
+import { auth } from "./auth.js";
+console.log(auth);
