@@ -5,4 +5,4 @@ import { app } from "./firebaseConfig.js";
 
 export const auth = getAuth(app);
 
-console.log(auth);
+console.log("firebase is working");
