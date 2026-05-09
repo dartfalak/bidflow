@@ -24,3 +24,6 @@ import { auth } from "./auth.js";
 console.log(auth);  
 
 import { createUserWithEmailAndPassword } from "firebase/auth"
+import { auth } from "./auth.js";
+
+createUserWithEmailAndPassword(auth, "test@gmail.com", "123456")
