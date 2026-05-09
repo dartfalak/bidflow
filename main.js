@@ -1,12 +1,9 @@
-
-
-// Import the functions you need from the SDKs you need
+// Firebase imports
 import { initializeApp } from "firebase/app";
 import { getAnalytics } from "firebase/analytics";
-// TODO: Add SDKs for Firebase products that you want to use
-// https://firebase.google.com/docs/web/setup#available-libraries
+import { getAuth, signInWithEmailAndPassword } from "firebase/auth";
 
-
+// Firebase config
 const firebaseConfig = {
   apiKey: "AIzaSyAPZVbfzvBKtyM3JoGyLgsgI7mU53QFpa0",
   authDomain: "bidflow-82f6c.firebaseapp.com",
@@ -17,58 +14,35 @@ const firebaseConfig = {
   measurementId: "G-RJSM4LH6DP"
 };
 
-import { getAuth} from "firebase/auth";
-import { app } from "./firebaseConfig.js";
-
-export const auth = getAuth(app);
-
-
-
+// Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const analytics = getAnalytics(app);
 
+// Auth
+const auth = getAuth(app);
 
-
-const modal = document.getElementById("signin-modal");
-const closeBtn = document.querySelector(".close-btn");
-
-const authButtons = document.querySelectorAll(".trigger-auth");
-
-
-authButtons.forEach(button => {
-    button.addEventListener("click", (e) => {
-        e.preventDefault();
-        modal.style.display = "block";
-    });
-});
-
-closeBtn.onclick = function() {
-    modal.style.display = "none";
-}
-
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
-
-
+// Elements
 let email = document.querySelector("#email");
 let pass = document.querySelector("#pass");
 let msg = document.querySelector("#msg");
 let enter = document.querySelector("#signin-btn");
 
+// Sign in
+enter.addEventListener("click", function (e) {
 
-enter.addEventListener("click",function(){
+  // STOP PAGE RELOAD
+  e.preventDefault();
 
-  signInWithEmailAndPassword(auth,email.value,pass.value)
-  .then(()=>{
-       msg.innerText="Sign In Successful"
-       msg.style.color = "green";
-       
-  })
-  .catch(()=>{
-    msg.innerText="Wrong Password or Email"
-    msg.style.color = "red";
-  })
-})
+  signInWithEmailAndPassword(auth, email.value, pass.value)
+
+    .then(() => {
+      msg.innerText = "Sign In Successful";
+      msg.style.color = "green";
+    })
+
+    .catch((error) => {
+      msg.innerText = error.message;
+      msg.style.color = "red";
+    });
+
+});

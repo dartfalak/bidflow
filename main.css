@@ -394,7 +394,6 @@
     font-weight: 600;
     cursor: pointer;
     font-size: 16px;
-    transition: 0.3s;
 }
 
 .auth-submit-btn:hover {
