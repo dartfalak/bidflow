@@ -56,7 +56,7 @@ window.onclick = function(event) {
 let email = document.querySelector("#email");
 let pass = document.querySelector("#pass");
 let msg = document.querySelector("#msg");
-
+let enter = document.querySelector("#signin-btn");
 
 
 enter.addEventListener("click",function(){
