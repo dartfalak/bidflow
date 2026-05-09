@@ -1,7 +1,39 @@
+
+
+// Import the functions you need from the SDKs you need
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
+
+
+const firebaseConfig = {
+  apiKey: "AIzaSyAPZVbfzvBKtyM3JoGyLgsgI7mU53QFpa0",
+  authDomain: "bidflow-82f6c.firebaseapp.com",
+  projectId: "bidflow-82f6c",
+  storageBucket: "bidflow-82f6c.firebasestorage.app",
+  messagingSenderId: "530618538215",
+  appId: "1:530618538215:web:a0e1d9a7e59e08438b6a42",
+  measurementId: "G-RJSM4LH6DP"
+};
+
+import { getAuth} from "firebase/auth";
+import { app } from "./firebaseConfig.js";
+
+export const auth = getAuth(app);
+
+
+
+const app = initializeApp(firebaseConfig);
+const analytics = getAnalytics(app);
+
+
+
 const modal = document.getElementById("signin-modal");
 const closeBtn = document.querySelector(".close-btn");
 
 const authButtons = document.querySelectorAll(".trigger-auth");
+
 
 authButtons.forEach(button => {
     button.addEventListener("click", (e) => {
@@ -20,17 +52,22 @@ window.onclick = function(event) {
     }
 }
 
-import { auth } from "./auth.js";
-console.log(auth);  
 
-import { createUserWithEmailAndPassword } from "firebase/auth"
-import { auth } from "./auth.js";
+let email = document.querySelector("#email");
+let pass = document.querySelector("#pass");
+let msg = document.querySelector("#msg");
 
-createUserWithEmailAndPassword(auth, "test@gmail.com", "123456")
-    .then((userCredential) => {
-        const user = userCredential.user;
-        console.log("User created:", user);
-    })
-    .catch((error) => {
-        console.log(error.message)
-    });
+
+enter.addEventListener("click",function(){
+
+  signInWithEmailAndPassword(auth,email.value,pass.value)
+  .then(()=>{
+       msg.innerText="Sign In Successful"
+       msg.style.color = "green";
+       
+  })
+  .catch(()=>{
+    msg.innerText="Wrong Password or Email"
+    msg.style.color = "red";
+  })
+})

@@ -1,5 +1,5 @@
 
-impo
+
 import { getAuth} from "firebase/auth";
 import { app } from "./firebaseConfig.js";
 
