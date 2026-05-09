@@ -21,4 +21,6 @@ window.onclick = function(event) {
 }
 
 import { auth } from "./auth.js";
-console.log(auth);
+console.log(auth);  
+
+import { createUserWithEmailAndPassword } from "firebase/auth"
