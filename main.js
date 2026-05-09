@@ -31,3 +31,6 @@ createUserWithEmailAndPassword(auth, "test@gmail.com", "123456")
         const user = userCredential.user;
         console.log("User created:", user);
     })
+    .catch((error) => {
+        console.log(error.message)
+    });
