@@ -19,7 +19,7 @@
 // const analytics = getAnalytics(app);
 
 
-const auth = getAuth(app);
+// const auth = getAuth(app);
 
 let email = document.querySelector("#email");
 let pass = document.querySelector("#pass");
